@@ -45,7 +45,7 @@ async function askPerplexity(inputUrl) {
     const data = {
         model: 'llama-3.1-sonar-small-128k-online',
         messages: [
-            { role: 'system', content: `You are a pro fact checker. Be concise and precise.` },
+            { role: 'system', content: `Be concise and precise.` },
             { role: 'user', content: `Hi, Here is a summary of a URL : ${response}. Can you verify if this is correct? Please note:
                 The summary must be of a news article, not a general website or a home page of any site (e.g., homepages like facebook.com, google.com, or ndtv.com).
                 If the URL is not a specific news article, return 'No.'
