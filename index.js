@@ -43,7 +43,7 @@ async function askPerplexity(inputUrl) {
     const url = 'https://api.perplexity.ai/chat/completions';
 
     const data = {
-        model: 'llama-3.1-sonar-large-128k-online',
+        model: 'llama-3.1-sonar-small-128k-online',
         messages: [
             { role: 'system', content: `You are a pro fact checker. Be concise and precise with your answers.` },
             { role: 'user', content: `Hi, Here is a summary of a URL : ${response}. Can you verify if this is correct? Please note:
