@@ -45,12 +45,14 @@ async function askPerplexity(inputUrl) {
     const data = {
         model: 'llama-3.1-sonar-small-128k-online',
         messages: [
-            { role: 'system', content: `You are a pro fact checker. Be concise and precise with your answers.` },
+            { role: 'system', content: `You are a pro fact checker. Be concise and precise.` },
             { role: 'user', content: `Hi, Here is a summary of a URL : ${response}. Can you verify if this is correct? Please note:
                 The summary must be of a news article, not a general website or a home page of any site (e.g., homepages like facebook.com, google.com, or ndtv.com).
                 If the URL is not a specific news article, return 'No.'
                 If the URL leads to a news article but the information is incorrect, return 'No.'
-                Only return 'Yes' if the URL leads to a specific news article and the information is verified as correct. Ensure the first word of your response is either 'Yes' or 'No' based on these conditions.` }
+                Only return 'Yes' if the URL leads to a specific news article and the information is verified as correct. Ensure the first word of your response is either 'Yes' or 'No' based on these conditions.
+                Provide a short reason description about your decision.
+                ` }
         ]
     };
 
