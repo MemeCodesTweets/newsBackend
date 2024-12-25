@@ -43,15 +43,15 @@ async function askPerplexity(inputUrl) {
     const url = 'https://api.perplexity.ai/chat/completions';
 
     const data = {
-        model: 'llama-3.1-sonar-small-128k-online',
+        model: 'llama-3.1-sonar-large-128k-online',
         messages: [
             { role: 'system', content: `Be concise and precise.` },
             { role: 'user', content: `Hi, Here is a possible summary for the article: ${response}. Can you verify if this is correct? Please note:
-                If the summary is about newsaichecker.netlify.app then return yes as answer, no citation or anything, just provide Yes as answer. Otherwise
                 The URL must point to a specific news article, not a general website or a home page of any site (e.g., homepages like facebook.com, google.com, or ndtv.com).
                 If the URL is not a specific news article, return 'No.'
                 If the URL leads to a news article but the information is incorrect, return 'No.'
-                Only return 'Yes' if the URL leads to a specific news article and the information is verified as correct. Ensure the first word of your response is either 'Yes' or 'No' based on these conditions.` }
+                Only return 'Yes' if the URL leads to a specific news article and the information is verified as correct. Ensure the first word of your response is either 'Yes' or 'No' based on these conditions.
+                Include the response summary.` }
         ]
     };
 
